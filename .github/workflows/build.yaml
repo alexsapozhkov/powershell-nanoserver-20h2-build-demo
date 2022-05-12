@@ -9,20 +9,17 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Build and Publish All
-      run: |
+    - run: |
         docker build --build-arg "BASE_IMAGE_SUFFIX=nanoserver-1809" . 
   build-docker-windows-nanoserver-20h2:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Build and Publish All
-      run: |
+    - run: |
         docker build --build-arg "BASE_IMAGE_SUFFIX=nanoserver-20h2" . 
   build-docker-windows-nanoserver-ltsc2022:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Build and Publish All
-      run: |
+    - run: |
         docker build --build-arg "BASE_IMAGE_SUFFIX=nanoserver-ltsc2022" . 
