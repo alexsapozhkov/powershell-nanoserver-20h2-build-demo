@@ -6,19 +6,19 @@ on:
 
 jobs:
   build-docker-windows-nanoserver-1809:
-    runs-on: windows-latest
+    runs-on: windows-2019
     steps:
     - uses: actions/checkout@v2
     - run: |
         docker build --build-arg "BASE_IMAGE_SUFFIX=nanoserver-1809" . 
   build-docker-windows-nanoserver-20h2:
-    runs-on: windows-latest
+    runs-on: windows-2019
     steps:
     - uses: actions/checkout@v2
     - run: |
         docker build --build-arg "BASE_IMAGE_SUFFIX=nanoserver-20h2" . 
   build-docker-windows-nanoserver-ltsc2022:
-    runs-on: windows-latest
+    runs-on: windows-2022
     steps:
     - uses: actions/checkout@v2
     - run: |
