@@ -1,0 +1,14 @@
+name: Build
+
+on: 
+  push:
+    branches: 'main'
+
+jobs:
+  build-docker-linux:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build and Publish All
+      run: |
+        docker build .
